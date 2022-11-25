@@ -1,9 +1,8 @@
 from math import sqrt, exp, cos, sin
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 
 def RungeKutta4(x0, xn, y0, z0, h):
-
     n = int((xn - x0)/h)
     # Containers for solutions
     xlist = [0] * (n + 1)
@@ -47,7 +46,6 @@ def exact(x):
 
 
 def plot(x1, y1, x2, y2, color1, color2, linestyle1, linestyle2, h):
-
     dpi = 80
     fig = plt.figure(dpi=dpi, figsize=(1600 / dpi, 900 / dpi))
 
@@ -64,6 +62,7 @@ def plot(x1, y1, x2, y2, color1, color2, linestyle1, linestyle2, h):
     plt.ylabel('y', fontsize=20)
     plt.legend(loc='upper right')
     plt.show()
+ 
     # Uncomment the following to print the figure:
     #file_name = str(h1) + '_2_RungeKutta4.png'
     #fig.savefig(file_name)
